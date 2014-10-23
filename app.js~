@@ -10,7 +10,6 @@ var users = require('./routes/users');
 var blogs = require('./routes/blogs');
 var season = require('./routes/season');
 var attentions = require('./routes/attentions');
-var sale = require('./routes/sale');
 
 var app = express();
 
@@ -31,7 +30,6 @@ app.use('/users', users);
 app.use('/blogs', blogs);
 app.use('/season', season);
 app.use('/attentions', attentions);
-app.use('/sale', sale);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
