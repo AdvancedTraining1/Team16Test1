@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var MaterialsSchema = new Schema({
+
+var mongoose = require('mongoose');
+var MaterialsSchema = new mongoose.Schema({
     name: { type: String, index: true },
     description:{ type: String},
     picture:{ type: String},
@@ -11,4 +13,4 @@ var MaterialsSchema = new Schema({
 
 });
 
-module.export = MaterialsSchema;
+module.exports = MaterialsSchema;

@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var RecipeSchema = new Schema({
+
+var mongoose = require('mongoose');
+var CommentSchema = new mongoose.Schema({
     author: {
         id: ObjectId,
         account: String },
@@ -9,4 +11,4 @@ var RecipeSchema = new Schema({
     content: String,
     replyid: { type: ObjectId }
 });
-module.export = RecipeSchema
+module.exports = CommentSchema

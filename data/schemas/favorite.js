@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var FavoriteSchema = new Schema({
+
+var mongoose = require('mongoose');
+var FavoriteSchema = new mongoose.Schema({
     user_id: { type: ObjectId },
     type:{ type:Number },
     add_at: { type: Date, default: Date.now },
@@ -10,4 +12,4 @@ var FavoriteSchema = new Schema({
 
 });
 
-module.export = FavoriteSchema;
+module.exports = FavoriteSchema;

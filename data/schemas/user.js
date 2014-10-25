@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var UserSchema = new Schema({
+
+var mongoose = require('mongoose');
+var UserSchema = new mongoose.Schema({
     username: { type: String, index: true },
     account: { type: String, unique: true },
     password: { type: String },
@@ -26,4 +28,4 @@ var UserSchema = new Schema({
     fans_count: { type: Number, default: 0 }
 });
 
-module.export = UserSchema;
+module.exports = UserSchema;

@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var AdvertisementSchema = new Schema({
+
+var mongoose = require('mongoose');
+var AdvertisementSchema = new mongoose.Schema({
     author: {
         id: ObjectId,
         account: String },
@@ -13,4 +15,4 @@ var AdvertisementSchema = new Schema({
 
 });
 
-module.export = AdvertisementSchema;
+module.exports = AdvertisementSchema;

@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var RecipeSchema = new Schema({
+
+var mongoose = require('mongoose');
+var RecipeSchema = new mongoose.Schema({
     recipeName: { type: String, index: true },
     description:{ type: String},
     material:{ type: String },
@@ -31,9 +33,10 @@ var RecipeSchema = new Schema({
     comment_list: { type:ObjectId},
 
     praise_count: { type: Number, default: 0 },
+    favorite_count:{ type: Number, default: 0 },
     comment_count: { type: Number, default: 0 },
     product_count: { type: Number, default: 0 }
 
 });
 
-module.export = RecipeSchema;
+module.exports = RecipeSchema;

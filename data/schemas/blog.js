@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var BlogSchema = new Schema({
+
+var mongoose = require('mongoose');
+var BlogSchema = new mongoose.Schema({
     title: { type: String, index: true },
     content:{ type: String},
     create_at: { type: Date, default: Date.now },
@@ -18,8 +20,9 @@ var BlogSchema = new Schema({
     comment_list: { type:ObjectId},
 
     praise_count: { type: Number, default: 0 },
+    favorite_count:{ type: Number, default: 0 },
     comment_count: { type: Number, default: 0 }
 
 });
 
-module.export = BlogSchema;
+module.exports = BlogSchema;

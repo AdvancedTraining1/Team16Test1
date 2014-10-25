@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var TopicSchema = new Schema({
+
+var mongoose = require('mongoose');
+var TopicSchema = new mongoose.Schema({
     topicName:{ type: String, unique: true },
     content: String,
     author: {
@@ -20,4 +22,4 @@ var TopicSchema = new Schema({
 
     upload_count: { type: Number, default: 0 }
 });
-module.export = TopicSchema;
+module.exports = TopicSchema;

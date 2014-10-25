@@ -1,7 +1,9 @@
 /**
  * Created by mengchi on 14-10-17.
  */
-var seasonFoodSchema = new Schema({
+
+var mongoose = require('mongoose');
+var SeasonFoodSchema = new mongoose.Schema({
     name: { type: String, index: true },
     month:{ type: String },
     picture:{ type: String},
@@ -11,4 +13,4 @@ var seasonFoodSchema = new Schema({
 
 });
 
-module.export = seasonFoodSchema;
+module.exports = SeasonFoodSchema;
